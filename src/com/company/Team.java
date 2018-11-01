@@ -3,7 +3,7 @@ package com.company;
 public class Team {
     double mu;
     double sigma;
-    private double trueMu = mu-(sigma*3);
+    double trueMu = mu-(sigma*3);
     String name;
 
     Team (String teamName){

@@ -11,7 +11,7 @@ public class Main {
     private static ArrayList<Team> teams = new ArrayList<>();
 
     public static void main(String[] args) throws IOException {
-        double beta = 8;
+        double beta = 10.1;
         //play around with beta value
         File file = new File("resources/games.csv");
         Scanner fileReader = new Scanner(file);
@@ -49,7 +49,9 @@ public class Main {
                     Team winner = teamFinder(temp[0]);
                     Team loser = teamFinder(temp[1]);
 
+                    assert winner != null;
                     double oldWinnerMu = winner.mu;
+                    assert loser != null;
                     double oldLoserMu = loser.mu;
                     double oldWinnerSigma = winner.sigma;
                     double oldLoserSigma = loser.sigma;
@@ -58,7 +60,7 @@ public class Main {
                     double t = (oldWinnerMu-oldLoserMu)/c;
 
                     winner.setMu(oldWinnerMu + ((Math.pow(oldWinnerSigma, 2))/c) * v(t));
-                    loser.setMu(oldLoserMu + ((Math.pow(oldLoserSigma, 2))/c) * v(t));
+                    loser.setMu(oldLoserMu - ((Math.pow(oldLoserSigma, 2))/c) * v(t));
                     winner.setSigma(Math.sqrt((Math.pow(oldWinnerSigma, 2)) * (1 - ((Math.pow(oldWinnerSigma, 2)) / Math.pow(c, 2)) * w(t))));
                     loser.setSigma(Math.sqrt((Math.pow(oldLoserSigma, 2)) * (1 - ((Math.pow(oldLoserSigma, 2)) / Math.pow(c, 2)) * w(t))));
                 }
@@ -66,7 +68,9 @@ public class Main {
                     Team winner = teamFinder(temp[1]);
                     Team loser = teamFinder(temp[0]);
 
+                    assert winner != null;
                     double oldWinnerMu = winner.mu;
+                    assert loser != null;
                     double oldLoserMu = loser.mu;
                     double oldWinnerSigma = winner.sigma;
                     double oldLoserSigma = loser.sigma;
@@ -75,14 +79,14 @@ public class Main {
                     double t = (oldWinnerMu-oldLoserMu)/c;
 
                     winner.setMu(oldWinnerMu + ((Math.pow(oldWinnerSigma, 2))/c) * v(t));
-                    loser.setMu(oldLoserMu + ((Math.pow(oldLoserSigma, 2))/c) * v(t));
+                    loser.setMu(oldLoserMu - ((Math.pow(oldLoserSigma, 2))/c) * v(t));
                     winner.setSigma(Math.sqrt((Math.pow(oldWinnerSigma, 2)) * (1 - ((Math.pow(oldWinnerSigma, 2)) / Math.pow(c, 2)) * w(t))));
                     loser.setSigma(Math.sqrt((Math.pow(oldLoserSigma, 2)) * (1 - ((Math.pow(oldLoserSigma, 2)) / Math.pow(c, 2)) * w(t))));
                 }
             }
-
         }
-        gamePicker("Perkiomen Valley", "Quakertown");
+        //gamePicker("Springford", "Perkiomen Valley");
+        //TgamePicker("Springford", "Perkiomen Valley");
     }
     private static void gamePicker(String team1Name, String team2Name) {
         if ((teamFinder(team1Name).mu/(teamFinder(team1Name).mu + teamFinder(team2Name).mu) * 100) >=50.0 ) {
@@ -95,6 +99,8 @@ public class Main {
             System.out.println("The game will likely be a tie");
         }
     }
+
+    //uses mu
     private static Team teamFinder(String teamName) {
         for (Team t:teams) {
             if (t.name.equals(teamName)) {
@@ -104,10 +110,23 @@ public class Main {
         return null;
     }
 
+    //uses trueMu
+    private static void TgamePicker(String team1Name, String team2Name) {
+        if ((teamFinder(team1Name).trueMu/(teamFinder(team1Name).trueMu + teamFinder(team2Name).trueMu) * 100) >=50.0 ) {
+            System.out.println(team1Name + " has a " + (teamFinder(team1Name).trueMu/(teamFinder(team1Name).trueMu + teamFinder(team2Name).trueMu) * 100) + " percent chance of winning");
+        }
+        else if ((teamFinder(team2Name).trueMu/(teamFinder(team1Name).trueMu + teamFinder(team2Name).trueMu) * 100) >=50.0 ) {
+            System.out.println(team2Name + " has a " + (teamFinder(team2Name).trueMu/(teamFinder(team1Name).trueMu + teamFinder(team2Name).trueMu) * 100) + " percent chance of winning");
+        }
+        else {
+            System.out.println("The game will likely be a tie");
+        }
+    }
+
     //general normal distribution
-    /*public static double gnd(double x, double mu, double sigma) {
+    public static double gnd(double x, double mu, double sigma) {
         return ((1.0/sigma) * (snd((x-mu)/sigma)));
-    }*/
+    }
     //standard normal distribution
     private static double snd(double x) {
         return ((1.0/(Math.sqrt(2.0 * Math.PI))) * (Math.pow(Math.E, -0.5 * Math.pow(x, 2.0))));
