@@ -11,13 +11,21 @@ public class Main {
     private static ArrayList<Team> teams = new ArrayList<>();
 
     public static void main(String[] args) throws IOException {
+        teamBuilderStandard("resources/NFL1819.csv");
+        String t1 = "Saints";
+        String t2 = "Cardinals";
+        gamePicker(t1, t2);
+        TgamePicker(t1, t2);
+    }
+
+    private static void teamBuilderStandard(String filePath) throws IOException {
         double beta = 10.1;
         //play around with beta value
-        File file = new File("resources/games.csv");
+        File file = new File(filePath);
         Scanner fileReader = new Scanner(file);
         while(fileReader.hasNextLine()) {
             String [] temp = fileReader.nextLine().split(",");
-            if (temp[0].equalsIgnoreCase("Team1") || temp[0].equalsIgnoreCase("") || temp[0].contains("week")) continue;
+            if (temp[0].equalsIgnoreCase("Team1") || temp[0].equalsIgnoreCase("") || temp[0].contains("week") || temp[0].contains("//")) continue;
 
             int count = teams.size();
             for (Team t: teams) {
@@ -85,9 +93,8 @@ public class Main {
                 }
             }
         }
-        //gamePicker("Springford", "Perkiomen Valley");
-        //TgamePicker("Springford", "Perkiomen Valley");
     }
+
     private static void gamePicker(String team1Name, String team2Name) {
         if ((teamFinder(team1Name).mu/(teamFinder(team1Name).mu + teamFinder(team2Name).mu) * 100) >=50.0 ) {
             System.out.println(team1Name + " has a " + (teamFinder(team1Name).mu/(teamFinder(team1Name).mu + teamFinder(team2Name).mu) * 100) + " percent chance of winning");
