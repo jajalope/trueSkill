@@ -12,10 +12,15 @@ public class Main {
 
     public static void main(String[] args) throws IOException {
         teamBuilderStandard("resources/NFL1819.csv");
-        String t1 = "Saints";
-        String t2 = "Cardinals";
-        gamePicker(t1, t2);
-        TgamePicker(t1, t2);
+        Scanner tRec = new Scanner(System.in);
+        while (true) {
+            String[] t = tRec.nextLine().split("/");
+            String t1 = t[0];
+            String t2 = t[1];
+            gamePicker(t1, t2);
+            TgamePicker(t1, t2);
+        }
+
     }
 
     private static void teamBuilderStandard(String filePath) throws IOException {
@@ -110,7 +115,7 @@ public class Main {
     //uses mu
     private static Team teamFinder(String teamName) {
         for (Team t:teams) {
-            if (t.name.equals(teamName)) {
+            if (t.name.equalsIgnoreCase(teamName)) {
                 return t;
             }
         }
