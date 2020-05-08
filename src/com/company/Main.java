@@ -11,7 +11,7 @@ public class Main {
     private static ArrayList<Team> teams = new ArrayList<>();
 
     public static void main(String[] args) throws IOException {
-        teamBuilderStandard("resources/NFL1819.csv");
+        teamBuilderStandard("resources/College Football (FBS)/19.csv");
         Scanner tRec = new Scanner(System.in);
         while (true) {
             String[] t = tRec.nextLine().split("/");
