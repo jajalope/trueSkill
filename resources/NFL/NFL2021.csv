@@ -1,0 +1,310 @@
+Week 1
+Texans,Chiefs,2
+Eagles,Football Team,2
+Seahawks,Falcons,1
+Browns,Ravens,2
+Jets,Bills,2
+Raiders,Panthers,1
+Bears,Lions,1
+Colts,Jaguars,2
+Packers,Vikings,1
+Dolphins,Patriots,2
+Chargers,Bengals,1
+Buccaneers,Saints,2
+Cardinals,49ers,1
+Cowboys,Rams,2
+Steelers,Giants,1
+Titans,Broncos,
+
+Week 2
+Bengals,Browns,
+Rams,Eagles,
+Panthers,Buccaneers,
+Jaguars,Titans,
+Giants,Bears,
+Falcons,Cowboys,
+Lions,Packers,
+Vikings,Colts,
+Bills,Dolphins,
+49ers,Jets,
+Broncos,Steelers,
+Football Team,Cardinals,
+Ravens,Texans,
+Chiefs,Chargers,
+Patriots,Seahawks,
+Saints,Raiders
+
+Week 3
+Dolphins,Jaguars,
+Bengals,Eagles,
+Bears,Falcons,
+Rams,Bills,
+Football Team,Browns,
+Titans,Vikings,
+Raiders,Patriots
+49ers,Giants,
+Texans,Steelers,
+Jets,Colts,
+Panthers,Chargers,
+Lions,Cardinals,
+Buccaneers,Broncos,
+Cowboys,Seahawks,
+Packers,Saints,
+Chiefs,Ravens,
+
+Week 4
+Broncos,Jets,
+Eagles,49ers,
+Colts,Bears,
+Saints,Lions,
+Cardinals,Panthers,
+Jaguars,Bengals,
+Browns,Cowboys,
+Vikings,Texans,
+Seahawks,Dolphins,
+Chargers,Buccaneers,
+Steelers,Titans,
+Ravens,Football Team,
+Giants,Rams,
+Patriots,Chiefs,
+Bills,Raiders,
+Falcons,Packers,
+
+Week 5
+Buccaneers,Bears,
+Eagles,Steelers,
+Panthers,Falcons,
+Bengals,Ravens,
+Jaguars,Texans,
+Raiders,Chiefs,
+Broncos,Patriots,
+Cardinals,Jets,
+Bills,Titans,
+Rams,Football Team,
+Dolphins,49ers,
+Colts,Browns,
+Giants,Cowboys,
+Vikings,Seahawks,
+Chargers,Saints,
+
+Week 6
+Chiefs,Bills,
+Ravens,Eagles,
+Bears,Panthers,
+Bengals,Colts,
+Lions,Jaguars,
+Falcons,Vikings,
+Football Team,Giants,
+Browns,Steelers,
+Texans,Titans,
+Dolphins,Broncos,
+Jets,Chargers,
+Packers,Buccaneers,
+Rams,49ers,
+Cardinals,Cowboys,
+
+Week 7
+Giants,Eagles,
+
+Lions,Falcons,
+Steelers,Ravens,
+Browns,Bengals,
+Chargers,Dolphins,
+Panthers,Saints,
+Bills,Jets,
+Cowboys,Football Team,
+Packers,Texans,
+Seahawks,Cardinals,
+49ers,Patriots,
+Chiefs,Broncos,
+Buccaneers,Raiders,
+
+Bears,Rams,
+
+Week 8
+Falcons,Panthers,
+
+Cowboys,Eagles,
+Colts,Lions,
+Vikings,Packers,
+Patriots,Bills,
+Titans,Bengals,
+Raiders,Browns,
+Jets,Chiefs,
+Rams,Dolphins,
+Jaguars,Chargers,
+Saints,Bears,
+49ers,Seahawks,
+
+Buccaneers,Giants,
+
+Week 9
+Packers,49ers,
+
+Broncos,Falcons,
+Seahawks,Bills,
+Ravens,Colts,
+Texans,Jaguars,
+Panthers,Chiefs,
+Lions,Vikings,
+Bears,Titans,
+Giants,Football Team,
+Raiders,Chargers,
+Dolphins,Cardinals,
+Steelers,Cowboys,
+Saints,Buccaneers,
+
+Patriots,Jets,
+
+Week 10
+Colts,Titans,
+
+Eagles,Giants,
+Buccaneers,Panthers,
+Texans,Browns,
+Football Team,Lions,
+Jaguars,Packers,
+Bengals,Steelers,
+Bills,Cardinals,
+Broncos,Raiders,
+Jets,Dolphins,
+Seahawks,Rams,
+49ers,Saints,
+Ravens,Patriots,
+
+Vikings,Bears,
+
+Week 11
+Cardinals,Seahawks,
+
+Eagles,Browns,
+Titans,Ravens,
+Lions,Panthers,
+Patriots,Texans,
+Packers,Colts,
+Steelers,Jaguars,
+Falcons,Saints,
+Bengals,Football Team,
+Chargers,Broncos,
+Cowboys,Vikings,
+Chiefs,Raiders,
+
+Rams,Buccaneers,
+
+Week 12
+Texans,Lions,
+Football Team,Cowboys,
+Ravens,Steelers,
+
+Raiders,Falcons,
+Chargers,Bills,
+Giants,Bengals,
+Titans,Colts,
+Browns,Jaguars,
+Panthers,Vikings,
+Cardinals,Patriots,
+Dolphins,Jets,
+Saints,Broncos,
+49ers,Rams,
+Chiefs,Buccaneers,
+Bears,Packers,
+
+Seahawks,Eagles
+
+Week 13
+Cowboys,Ravens,
+
+Eagles,Packers,
+Saints,Falcons,
+Lions,Bears,
+Colts,Texans,
+Raiders,Jets,
+Browns,Titans,
+Bengals,Dolphins,
+Jaguars,Vikings,
+Football Team,Steelers,
+Rams,Cardinals,
+Giants,Seahawks,
+Patriots,Chargers,
+Broncos,Chiefs,
+
+Bills,49ers,
+
+Week 14
+Patriots,Rams,
+
+Saints,Eagles,
+Texans,Bears,
+Packers,Lions,
+Titans,Jaguars,
+Broncos,Panthers,
+Cowboys,Bengals,
+Chiefs,Dolphins,
+Cardinals,Giants,
+Vikings,Buccaneers,
+Colts,Raiders,
+Jets,Seahawks,
+Falcons,Chargers,
+Football Team,49ers,
+Steelers,Bills,
+
+Ravens,Browns,
+
+Week 15
+Chargers,Raiders,
+
+Eagles,Cardinals,
+Bills,Broncos,
+Panthers,Packers,
+Texans,Colts,
+Jets,Rams,
+Lions,Titans,
+Buccaneers,Falcons,
+Jaguars,Ravens,
+Patriots,Dolphins,
+Bears,Vikings,
+Browns,Giants,
+Seahawks,Football Team,
+Chiefs,Saints,
+49ers,Cowboys,
+
+Steelers,Bengals,
+
+Week 16
+Vikings,Saints,
+
+Eagles,Cowboys,
+49ers,Cardinals,
+Buccaneers,Lions,
+Dolphins,Raiders,
+Broncos,Chargers,
+Browns,Jets,
+Giants,Ravens,
+Bengals,Texans,
+Bears,Jaguars,
+Falcons,Chiefs,
+Colts,Steelers,
+Panthers,Football Team,
+Rams,Seahawks,
+Titans,Packers,
+
+Bills,Patriots,
+
+Week 17
+Football Team,Eagles,
+Dolphins,Bills,
+Saints,Panthers,
+Packers,Bears,
+Ravens,Bengals,
+Steelers,Browns,
+Vikings,Lions,
+Jaguars,Colts,
+Jets,Patriots,
+Titans,Texans,
+Chargers,Chiefs,
+Cowboys,Giants,
+Falcons,Buccaneers,
+Raiders,Broncos,
+Cardinals,Rams,
+Seahawks,49ers,
+
