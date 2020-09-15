@@ -12,7 +12,7 @@ public class Main {
 
     public static void main(String[] args) throws IOException {
         //teamBuilderStandard("resources/NFL/NFL2021.csv");
-        teamBuilderSportsReference("resources/NHL/HRPlayoff2020.csv");
+        teamBuilderSportsReference("resources/NBA/2020bubble.csv");
         //teamBuilderSportsReferenceFBS("resources/College Football (FBS)/19.csv");
         Scanner tRec = new Scanner(System.in);
         //teamBuilderMM2017(tRec.nextLine());
