@@ -158,15 +158,15 @@ Sun Sep 13 2020,Los Angeles Clippers,98,Denver Nuggets,111
 Tue Sep 15 2020,Miami Heat,117,Boston Celtics,114
 Tue Sep 15 2020,Denver Nuggets,104,Los Angeles Clippers,89
 Thu Sep 17 2020,Miami Heat,106,Boston Celtics,101
-//Fri Sep 18 2020,Denver Nuggets,,Los Angeles Lakers,
-//Sat Sep 19 2020,Boston Celtics,,Miami Heat,
-//Sun Sep 20 2020,Denver Nuggets,,Los Angeles Lakers,
-//Mon Sep 21 2020,Boston Celtics,,Miami Heat,
-//Tue Sep 22 2020,Los Angeles Lakers,,Denver Nuggets,
-//Wed Sep 23 2020,Miami Heat,,Boston Celtics,
+Fri Sep 18 2020,Denver Nuggets,114,Los Angeles Lakers,126
+Sat Sep 19 2020,Boston Celtics,117,Miami Heat,106
+Sun Sep 20 2020,Denver Nuggets,103,Los Angeles Lakers,105
+Tue Sep 22 2020,Los Angeles Lakers,106,Denver Nuggets,114
+Wed Sep 23 2020,Miami Heat,112,Boston Celtics,109
 //Thu Sep 24 2020,Los Angeles Lakers,,Denver Nuggets,
 //Fri Sep 25 2020,Boston Celtics,,Miami Heat,
 //Sat Sep 26 2020,Denver Nuggets,,Los Angeles Lakers,
 //Sun Sep 27 2020,Miami Heat,,Boston Celtics,
 //Mon Sep 28 2020,Los Angeles Lakers,,Denver Nuggets,
+//Tue Sep 29 2020,Boston Celtics,,Miami Heat,
 //Wed Sep 30 2020,Denver Nuggets,,Los Angeles Lakers,
