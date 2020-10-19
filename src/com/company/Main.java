@@ -13,9 +13,9 @@ public class Main {
     public static void main(String[] args) throws IOException {
         //teamBuilderSportsReference("resources/NHL/HRRegular19-20.csv");
         //teamBuilderSportsReference("resources/NHL/HRPlayoff2020.csv");
-        //teamBuilderSportsReference("resources/NBA/2020bubble.csv");
-        teamBuilderStandard("resources/NFL/NFL2021.csv");
-        //teamBuilderSportsReferenceFBS("resources/College Football (FBS)/19.csv");
+        //teamBuilderSportsReferenceNBA("resources/NBA/2020bubble.csv");
+        //teamBuilderStandard("resources/NFL/NFL2021.csv");
+        teamBuilderSportsReference("resources/College Football (FBS)/20.csv");
         Scanner tRec = new Scanner(System.in);
         //teamBuilderMM2017(tRec.nextLine());
         while (true) {
@@ -106,6 +106,76 @@ public class Main {
     }
 
     private static void teamBuilderSportsReference(String filePath) throws IOException {
+        double beta = 10.1;
+        //play around with beta value
+        File file = new File(filePath);
+        Scanner fileReader = new Scanner(file);
+        while(fileReader.hasNextLine()) {
+            String [] temp = fileReader.nextLine().split(",");
+            if (temp[0].equalsIgnoreCase("Date") || temp[0].contains("//")) continue;
+
+            int count = teams.size();
+            for (Team t: teams) {
+                if (t.name.equals(temp[1])) break;
+                count--;
+            }
+            if (count == 0) {
+                Team x = new Team(temp[1]);
+                teams.add(x);
+            }
+            count = teams.size();
+            for (Team t: teams) {
+                if (t.name.equals(temp[3])) break;
+                count--;
+            }
+            if (count == 0) {
+                Team x = new Team(temp[3]);
+                teams.add(x);
+
+            }
+
+            if (Integer.parseInt(temp[2])>Integer.parseInt(temp[4])) {
+                Team winner = teamFinder(temp[1]);
+                Team loser = teamFinder(temp[3]);
+
+                assert winner != null;
+                double oldWinnerMu = winner.mu;
+                assert loser != null;
+                double oldLoserMu = loser.mu;
+                double oldWinnerSigma = winner.sigma;
+                double oldLoserSigma = loser.sigma;
+
+                double c = Math.sqrt(2*Math.pow(beta, 2) + Math.pow(oldWinnerSigma, 2) + Math.pow(oldLoserSigma, 2));
+                double t = (oldWinnerMu-oldLoserMu)/c;
+
+                winner.setMu(oldWinnerMu + ((Math.pow(oldWinnerSigma, 2))/c) * v(t));
+                loser.setMu(oldLoserMu - ((Math.pow(oldLoserSigma, 2))/c) * v(t));
+                winner.setSigma(Math.sqrt((Math.pow(oldWinnerSigma, 2)) * (1 - ((Math.pow(oldWinnerSigma, 2)) / Math.pow(c, 2)) * w(t))));
+                loser.setSigma(Math.sqrt((Math.pow(oldLoserSigma, 2)) * (1 - ((Math.pow(oldLoserSigma, 2)) / Math.pow(c, 2)) * w(t))));
+            }
+            else {
+                Team winner = teamFinder(temp[3]);
+                Team loser = teamFinder(temp[1]);
+
+                assert winner != null;
+                double oldWinnerMu = winner.mu;
+                assert loser != null;
+                double oldLoserMu = loser.mu;
+                double oldWinnerSigma = winner.sigma;
+                double oldLoserSigma = loser.sigma;
+
+                double c = Math.sqrt(2*Math.pow(beta, 2) + Math.pow(oldWinnerSigma, 2) + Math.pow(oldLoserSigma, 2));
+                double t = (oldWinnerMu-oldLoserMu)/c;
+
+                winner.setMu(oldWinnerMu + ((Math.pow(oldWinnerSigma, 2))/c) * v(t));
+                loser.setMu(oldLoserMu - ((Math.pow(oldLoserSigma, 2))/c) * v(t));
+                winner.setSigma(Math.sqrt((Math.pow(oldWinnerSigma, 2)) * (1 - ((Math.pow(oldWinnerSigma, 2)) / Math.pow(c, 2)) * w(t))));
+                loser.setSigma(Math.sqrt((Math.pow(oldLoserSigma, 2)) * (1 - ((Math.pow(oldLoserSigma, 2)) / Math.pow(c, 2)) * w(t))));
+            }
+        }
+    }
+
+    private static void teamBuilderSportsReferenceNBA(String filePath) throws IOException {
         double beta = 10.1;
         //play around with beta value
         File file = new File(filePath);

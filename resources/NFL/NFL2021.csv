@@ -35,73 +35,71 @@ Patriots,Seahawks,2
 Saints,Raiders,2
 
 Week 3
-Dolphins,Jaguars,
-Bengals,Eagles,
-Bears,Falcons,
-Rams,Bills,
-Football Team,Browns,
-Titans,Vikings,
-Raiders,Patriots
-49ers,Giants,
-Texans,Steelers,
-Jets,Colts,
-Panthers,Chargers,
-Lions,Cardinals,
-Buccaneers,Broncos,
-Cowboys,Seahawks,
-Packers,Saints,
-Chiefs,Ravens,
+Dolphins,Jaguars,1
+//Bengals,Eagles,T
+Bears,Falcons,1
+Rams,Bills,2
+Football Team,Browns,2
+Titans,Vikings,1
+Raiders,Patriots,2
+49ers,Giants,1
+Texans,Steelers,2
+Jets,Colts,2
+Panthers,Chargers,1
+Lions,Cardinals,1
+Buccaneers,Broncos,1
+Cowboys,Seahawks,2
+Packers,Saints,1
+Chiefs,Ravens,1
 
 Week 4
-Broncos,Jets,
-Eagles,49ers,
-Colts,Bears,
-Saints,Lions,
-Cardinals,Panthers,
-Jaguars,Bengals,
-Browns,Cowboys,
-Vikings,Texans,
-Seahawks,Dolphins,
-Chargers,Buccaneers,
-Steelers,Titans,
-Ravens,Football Team,
-Giants,Rams,
-Patriots,Chiefs,
-Bills,Raiders,
-Falcons,Packers,
+Broncos,Jets,1
+Eagles,49ers,1
+Colts,Bears,1
+Saints,Lions,1
+Cardinals,Panthers,2
+Jaguars,Bengals,2
+Browns,Cowboys,1
+Vikings,Texans,1
+Seahawks,Dolphins,1
+Chargers,Buccaneers,2
+Ravens,Football Team,1
+Giants,Rams,2
+Patriots,Chiefs,2
+Bills,Raiders,1
+Falcons,Packers,2
 
 Week 5
-Buccaneers,Bears,
-Eagles,Steelers,
-Panthers,Falcons,
-Bengals,Ravens,
-Jaguars,Texans,
-Raiders,Chiefs,
-Broncos,Patriots,
-Cardinals,Jets,
-Bills,Titans,
-Rams,Football Team,
-Dolphins,49ers,
-Colts,Browns,
-Giants,Cowboys,
-Vikings,Seahawks,
-Chargers,Saints,
+Buccaneers,Bears,2
+Eagles,Steelers,2
+Panthers,Falcons,1
+Bengals,Ravens,2
+Jaguars,Texans,2
+Raiders,Chiefs,1
+Cardinals,Jets,1
+Bills,Titans,2
+Rams,Football Team,1
+Dolphins,49ers,1
+Colts,Browns,2
+Giants,Cowboys,2
+Vikings,Seahawks,2
+Chargers,Saints,2
 
 Week 6
-Chiefs,Bills,
-Ravens,Eagles,
-Bears,Panthers,
-Bengals,Colts,
-Lions,Jaguars,
-Falcons,Vikings,
-Football Team,Giants,
-Browns,Steelers,
-Texans,Titans,
-Dolphins,Broncos,
-Jets,Chargers,
-Packers,Buccaneers,
-Rams,49ers,
+Ravens,Eagles,1
+Bears,Panthers,1
+Bengals,Colts,2
+Lions,Jaguars,1
+Falcons,Vikings,1
+Football Team,Giants,2
+Browns,Steelers,2
+Texans,Titans,2
+Broncos,Patriots,1
+Dolphins,Jets,1
+Packers,Buccaneers,2
+Rams,49ers,2
 Cardinals,Cowboys,
+Chiefs,Bills,
 
 Week 7
 Giants,Eagles,
