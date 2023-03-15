@@ -15,7 +15,8 @@ public class Main {
         //teamBuilderSportsReference("resources/NHL/HRPlayoff2020.csv");
         //teamBuilderSportsReferenceNBA("resources/NBA/2020bubble.csv");
         //teamBuilderStandard("resources/NFL/NFL2021.csv");
-        teamBuilderSportsReference("resources/College Football (FBS)/20.csv");
+        //teamBuilderSportsReference("resources/College Football (FBS)/20.csv");
+        teamBuilderMM("2023");
         Scanner tRec = new Scanner(System.in);
         //teamBuilderMM2017(tRec.nextLine());
         while (true) {
@@ -328,6 +329,64 @@ public class Main {
             }
         }
         File file2 = new File("resources/mens-machine-learning-competition-2019/Prelim2019_RegularSeasonCompactResults/Prelim2019_RegularSeasonCompactResults.csv");
+        Scanner fileReader2 = new Scanner(file2);
+        while(fileReader2.hasNextLine()) {
+            String [] temp = fileReader2.nextLine().split(",");
+            if (!temp[0].equalsIgnoreCase(year)) continue;
+
+            if (temp.length>1) {
+                Team winner = teamFinderID(temp[2]);
+                Team loser = teamFinderID(temp[4]);
+
+                assert winner != null;
+                double oldWinnerMu = winner.mu;
+                assert loser != null;
+                double oldLoserMu = loser.mu;
+                double oldWinnerSigma = winner.sigma;
+                double oldLoserSigma = loser.sigma;
+
+                double c = Math.sqrt(2*Math.pow(beta, 2) + Math.pow(oldWinnerSigma, 2) + Math.pow(oldLoserSigma, 2));
+                double t = (oldWinnerMu-oldLoserMu)/c;
+
+                winner.setMu(oldWinnerMu + ((Math.pow(oldWinnerSigma, 2))/c) * v(t));
+                loser.setMu(oldLoserMu - ((Math.pow(oldLoserSigma, 2))/c) * v(t));
+                winner.setSigma(Math.sqrt((Math.pow(oldWinnerSigma, 2)) * (1 - ((Math.pow(oldWinnerSigma, 2)) / Math.pow(c, 2)) * w(t))));
+                loser.setSigma(Math.sqrt((Math.pow(oldLoserSigma, 2)) * (1 - ((Math.pow(oldLoserSigma, 2)) / Math.pow(c, 2)) * w(t))));
+            }
+        }
+    }
+
+    private static void teamBuilderMM(String year) throws IOException {
+        double beta = 10.1;
+        String location = "resources/MM/" + year +"/MTeams.csv";
+        //play around with beta value
+        File file1 = new File(location);
+        Scanner fileReader1 = new Scanner(file1);
+        while(fileReader1.hasNextLine()) {
+            String [] temp = fileReader1.nextLine().split(",");
+            if (temp[0].equalsIgnoreCase("TeamID")) continue;
+
+            int count = teams.size();
+            for (Team t: teams) {
+                if (t.name.equals(temp[1])) break;
+                count--;
+            }
+            if (count == 0) {
+                Team x = new Team(temp[1],temp[0]);
+                teams.add(x);
+            }
+            count = teams.size();
+            for (Team t: teams) {
+                if (t.name.equals(temp[1])) break;
+                count--;
+            }
+            if (count == 0) {
+                Team x = new Team(temp[1],temp[0]);
+                teams.add(x);
+            }
+        }
+        location = "resources/MM/" + year + "/MRegularSeasonCompactResults.csv";
+        File file2 = new File(location);
         Scanner fileReader2 = new Scanner(file2);
         while(fileReader2.hasNextLine()) {
             String [] temp = fileReader2.nextLine().split(",");
