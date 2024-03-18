@@ -16,7 +16,7 @@ public class Main {
         //teamBuilderSportsReferenceNBA("resources/NBA/2020bubble.csv");
         //teamBuilderStandard("resources/NFL/NFL2021.csv");
         //teamBuilderSportsReference("resources/College Football (FBS)/20.csv");
-        teamBuilderMM("2023");
+        teamBuilderMM("2024");
         Scanner tRec = new Scanner(System.in);
         //teamBuilderMM2017(tRec.nextLine());
         while (true) {
